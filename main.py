@@ -48,4 +48,11 @@ def file_name():
 if __name__ == '__main__':
     output1=[]
     output1 = file_name()
+    x = 1
+    for i in output1:
+        new_file = str(x) + ".out"
+        with open(new_file, 'w') as f:
+            S3 = str(i)
+            f.write(S3)
+            x = x + 1
     print(output1)
